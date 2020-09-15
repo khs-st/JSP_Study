@@ -38,27 +38,27 @@ public class Customer {
 
 	public void setHobbys(String[] hobbys) {
 		// this.hobbys = hobbys;
-		//String¹è¿­·Î ¸¸µé¾îÁÜ
+		//Stringï¿½è¿­ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		this.hobbys = new String[hobbys.length];
 		
-		//array hobbysÀÇ 0¹ø °ªÀ» array this.hobbysÀÇ 0¹øÂ°·Î hobbys.length¸¸Å­ º¹»ç
+		//array hobbysï¿½ï¿½ 0ï¿½ï¿½ ï¿½ï¿½ï¿½ï¿½ array this.hobbysï¿½ï¿½ 0ï¿½ï¿½Â°ï¿½ï¿½ hobbys.lengthï¿½ï¿½Å­ ï¿½ï¿½ï¿½ï¿½
 		System.arraycopy(hobbys, 0, this.hobbys, 0, hobbys.length);
 		for (int i = 0; i < this.hobbys.length; i++) {
 			switch (this.hobbys[i]) {
 			case "cook":
-				this.hobbys[i] = "¿ä¸®";
+				this.hobbys[i] = "ìš”ë¦¬";
 				break;
 			case "run":
-				this.hobbys[i] = "´Þ¸®±â";
+				this.hobbys[i] = "ë‹¬ë¦¬ê¸°";
 				break;
 			case "swim":
-				this.hobbys[i] = "¼ö¿µ";
+				this.hobbys[i] = "ìˆ˜ì˜";
 				break;
 			case "sleep":
-				this.hobbys[i] = "¼ö¸é";
+				this.hobbys[i] = "ìž ";
 				break;
 			case "read":
-				this.hobbys[i] = "µ¶¼­";
+				this.hobbys[i] = "ë…ì„œ";
 				break;
 			default:
 			}

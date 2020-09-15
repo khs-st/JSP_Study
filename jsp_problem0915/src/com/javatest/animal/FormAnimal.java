@@ -44,10 +44,10 @@ public class FormAnimal extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 		// doGet(request, response);
-		// ÇÑ±Û ±úÁü Ã³¸®
+		// ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		request.setCharacterEncoding("utf-8");
 
-		// ÆÄ¶ó¸ŞÅÍ ¹Ş´Â ºÎºĞ(FormÅÂ±×ÀÇ °ª ¹Ş´Â ºÎºĞ)
+		// ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½(Formï¿½Â±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½)
 		String vName = request.getParameter("name");
 		String vAge = request.getParameter("age");
 		String vNumber = request.getParameter("number");
@@ -88,10 +88,10 @@ public class FormAnimal extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 
 		writer.println("<html><head></head><body>");
-		writer.println("ÀÌ¸§ : " + ani.getName() + "<br />");
-		writer.println("³ªÀÌ : " + ani.getAge() + "<br />");
-		writer.println("½Äº°¹øÈ£ : " + ani.getNumber() + "<br />");
-		writer.println("Á¾·ù : " + ani.getKinds() + "<br />");
+		writer.println("ì´ë¦„: " + ani.getName() + "<br />");
+		writer.println("ë‚˜ì´: " + ani.getAge() + "<br />");
+		writer.println("ë²ˆí˜¸: " + ani.getNumber() + "<br />");
+		writer.println("ì¢…ë¥˜: " + ani.getKinds() + "<br />");
 		writer.println("</body></html>");
 		writer.close();
 	}

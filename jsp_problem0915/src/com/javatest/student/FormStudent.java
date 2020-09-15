@@ -42,10 +42,10 @@ public class FormStudent extends HttpServlet {
 			throws ServletException, IOException {
 		// TODO Auto-generated method stub
 
-		// ÇÑ±Û ±úÁü Ã³¸®
-		request.setCharacterEncoding("utf-8");
+		// ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
+		request.setCharacterEncoding("UTF-8");
 
-		// ÆÄ¶ó¸ŞÅÍ ¹Ş´Â ºÎºĞ(FormÅÂ±×ÀÇ °ª ¹Ş´Â ºÎºĞ)
+		// ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½(Formï¿½Â±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½)
 
 		String vName = request.getParameter("name");
 		String vAge = request.getParameter("age");
@@ -70,9 +70,9 @@ public class FormStudent extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 
 		writer.println("<html><head></head><body>");
-		writer.println("ÀÌ¸§ : " + stu.getName() + "<br />");
-		writer.println("³ªÀÌ : " + stu.getAge() + "<br />");
-		writer.println("ÇĞ¹ø : " + stu.getNumber() + "<br />");
+		writer.println("ì´ë¦„ : " + stu.getName() + "<br />");
+		writer.println("ë‚˜ì´ : " + stu.getAge() + "<br />");
+		writer.println("í•™ë²ˆ : " + stu.getNumber() + "<br />");
 		writer.println("</body></html>");
 		writer.close();
 	}

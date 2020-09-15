@@ -11,9 +11,9 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 /**
- * Servlet implementation class FormExampleTest
+ * Servlet implementation class FormExample
  */
-@WebServlet("/FormExampleTest")
+@WebServlet("/FormExample")
 public class FormExample extends HttpServlet {
 	private static final long serialVersionUID = 1L;
        
@@ -42,10 +42,10 @@ public class FormExample extends HttpServlet {
 		// TODO Auto-generated method stub
 		//doGet(request, response);
 		
-		//ÇÑ±Û ±úÁü Ã³¸®
+		//ï¿½Ñ±ï¿½ ï¿½ï¿½ï¿½ï¿½ Ã³ï¿½ï¿½
 		request.setCharacterEncoding("utf-8");
 		
-		//ÆÄ¶ó¸ŞÅÍ ¹Ş´Â ºÎºĞ(FormÅÂ±×ÀÇ °ª ¹Ş´Â ºÎºĞ)
+		//ï¿½Ä¶ï¿½ï¿½ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½(Formï¿½Â±ï¿½ï¿½ï¿½ ï¿½ï¿½ ï¿½Ş´ï¿½ ï¿½Îºï¿½)
 		
 		String vName = request.getParameter("name");
 		String vId = request.getParameter("id");
@@ -90,13 +90,13 @@ public class FormExample extends HttpServlet {
 		PrintWriter writer = response.getWriter();
 		
 		writer.println("<html><head></head><body>");
-		writer.println("ÀÌ¸§ : " + cus.getName() + "<br />");
-		writer.println("¾ÆÀÌµğ : " + cus.getId() + "<br />");
-		writer.println("ºñ¹Ğ¹øÈ£ : " + cus.getPw() + "<br />");
-		writer.println("Ãë¹Ì : " + Arrays.toString(cus.getHobbys()) + "<br />");
-		writer.println("Àü°ø : " + major + "<br/>");
-		writer.println("¼ºº° : " + gender + "<br/>");
-		writer.println("ÇÁ·ÎÅäÄİ : " + protocol + "<br/>");
+		writer.println("ì´ë¦„: " + cus.getName() + "<br />");
+		writer.println("ì•„ì´ë””: " + cus.getId() + "<br />");
+		writer.println("ë¹„ë°€ë²ˆí˜¸: " + cus.getPw() + "<br />");
+		writer.println("ì·¨ë¯¸: " + Arrays.toString(cus.getHobbys()) + "<br />");
+		writer.println("ì „ê³µ: " + major + "<br/>");
+		writer.println("ì„±ë³„: " + gender + "<br/>");
+		writer.println("í”„ë¡œí† ì½œ: " + protocol + "<br/>");
 		writer.println("</body></html>");
 		writer.close();
 
