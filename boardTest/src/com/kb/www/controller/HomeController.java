@@ -36,6 +36,7 @@ public class HomeController extends HttpServlet {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
 			} else {
+				//else를 실행한다.
 				RequestDispatcher dispatcher = request.getRequestDispatcher(forward.getPath());
 				dispatcher.forward(request, response);
 			}
