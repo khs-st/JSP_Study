@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd" id="WebApp_ID" version="3.1">
+  <servlet>
+  <description></description>
+  <display-name>ErrorPronServlet2</display-name>
+  <servlet-name>ErrorPronServlet2</servlet-name>
+  <servlet-class>com.requesterror.test.ErrorPronServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+  <servlet-name>ErrorPronServlet2</servlet-name>
+  <url-pattern>/error_pron_dispatch</url-pattern>
+  </servlet-mapping>
+  	<servlet>
+		<description></description>
+		<display-name>ErrorPronServlet</display-name>
+		<servlet-name>ErrorPronServlet</servlet-name>
+		<servlet-class>com.redirect.test.ErrorPronServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>ErrorPronServlet</servlet-name>
+		<url-pattern>/error_pron</url-pattern>
+	</servlet-mapping>
+</web-app>
