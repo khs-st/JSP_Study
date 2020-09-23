@@ -1,4 +1,5 @@
 package com.kb.www.dao;
+
 import java.sql.Connection;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
@@ -41,18 +42,18 @@ public class BoardDAO {
 	public void setConnection(Connection con) {
 		this.con = con;
 	}
-	
-	//BoardService를 만들고 난 후부터 작성함, 쿼리문입력하기
-	public ArrayList<ArticleVO> getArticleList(){
-		PreparedStatement pstmt=null;
-		ResultSet rs=null;
-		ArrayList<ArticleVO> list=new ArrayList<ArticleVO>();
+
+	// BoardService를 만들고 난 후부터 작성함, 쿼리문입력하기
+	public ArrayList<ArticleVO> getArticleList() {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArrayList<ArticleVO> list = new ArrayList<ArticleVO>();
 		try {
-			pstmt=con.prepareStatement("select * from boardtest");
-			rs=pstmt.executeQuery();
-			//while문을 이용하면 데이터가 있는동안은 계속 반복되므로 데이터가 없을때까지 확인가능
-			while(rs.next()) {
-				ArticleVO vo=new ArticleVO();
+			pstmt = con.prepareStatement("select * from boardtest");
+			rs = pstmt.executeQuery();
+			// while문을 이용하면 데이터가 있는동안은 계속 반복되므로 데이터가 없을때까지 확인가능
+			while (rs.next()) {
+				ArticleVO vo = new ArticleVO();
 				vo.setArticleNumber(rs.getInt("num"));
 				vo.setArticleSubject(rs.getString("subject"));
 				vo.setArticleContents(rs.getString("content"));
@@ -62,14 +63,35 @@ public class BoardDAO {
 				vo.setDeleteDate(rs.getString("ddate"));
 				list.add(vo);
 			}
-			
-			
-		}catch(Exception e) {
+		} catch (Exception e) {
 			e.printStackTrace();
-		}finally {
+		} finally {
 			close(rs);
 			close(pstmt);
 		}
-	return list;	
+		return list;
+	}
+
+	// BoardService를 만들고 난 후부터 작성함, 쿼리문입력하기
+	public ArticleVO getArticleDetail(String num) {
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		ArticleVO vo = new ArticleVO();
+		try {
+			pstmt = con.prepareStatement("select * from boardtest where num="+num);
+			rs = pstmt.executeQuery();
+			// while문을 이용하면 데이터가 있는동안은 계속 반복되므로 데이터가 없을때까지 확인가능
+			while (rs.next()) {
+				vo.setArticleNumber(rs.getInt("num"));
+				vo.setArticleSubject(rs.getString("subject"));
+				vo.setArticleContents(rs.getString("content"));
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		} finally {
+			close(rs);
+			close(pstmt);
+		}
+		return vo;
 	}
 }

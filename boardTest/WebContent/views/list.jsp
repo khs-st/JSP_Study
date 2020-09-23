@@ -22,6 +22,23 @@ table, tr, td {
 	border: 1px solid black;
 }
 </style>
+<script src="https://code.jquery.com/jquery-1.11.3.js"
+	type="text/javascript"></script>
+
+<script type="text/javascript">
+function showDetail(articleNum){
+	location.href="detail?num="+articleNum;
+}
+$(document).ready(function () 
+		{
+		    $('tr').hover(function(){
+		        $(this).css('color','blue');
+		    }, function() {
+		        $(this).css('color','black');
+		    });
+		});
+
+</script>
 </head>
 <body>
 	<h1>게시판</h1>
@@ -34,17 +51,14 @@ table, tr, td {
 		</tr>
 		<%
 			if (list.size() > 0) {
-		%>
-		<%
 			for (int i = 0; i < list.size(); i++) {
 		%>
-		<tr>
-			<td><%=list.get(i).getArticleNumber()%></td>
+		<tr onclick="showDetail(<%=list.get(i).getArticleNumber()%>)">
+			<td ><%=list.get(i).getArticleNumber()%></td>
 			<td><%=list.get(i).getArticleSubject()%></td>
 			<td><%=list.get(i).getHit()%></td>
 			<td><%=list.get(i).getWriteDate()%></td>
 		</tr>
-
 		<%
 			}
 		}
