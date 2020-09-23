@@ -33,7 +33,7 @@ public class HomeController extends HttpServlet {
 			e.printStackTrace();
 		}
 		// 내질문!
-		//if문의 forward가 널이아닐때 isRedirect 실행하는데 if문을 써서 sendRedirect일 경우를 만든이유/sendRedirect와 RequestDispatcher차이
+		//if문의 forward가 널이아닐때 isRedirect 실행하는데 if문을 써서 sendRedirect일 경우를 만든이유: 현재 미완성/sendRedirect와 RequestDispatcher차이
 		if (forward != null) {
 			if (forward.isRedirect()) {
 				response.sendRedirect(forward.getPath());
