@@ -17,6 +17,7 @@ public class ArticleListAction implements Action {
 			BoardService svc=new BoardService();
 			ArrayList<ArticleVO> articleList = svc.getArticleList();
 			ActionForward forward=new ActionForward();
+			//list 데이터(Attribute)를 키값으로 HomeController로 넘겨줌
 			request.setAttribute("list",articleList);
 			forward.setPath("/views/list.jsp");
 			return forward;
