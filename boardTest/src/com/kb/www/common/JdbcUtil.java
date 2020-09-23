@@ -22,7 +22,7 @@ public class JdbcUtil {
 		} catch (Exception e) {
 			e.printStackTrace();
 		}
-		return null;
+		return con;
 	}
 
 	// 리소스를 돌려주는 역할 close( con,pstmt,rs)

@@ -1,8 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Context>
-	<Resource name="jdbc/MysqlDB" auto="Container"
-		type="javax.sql.DataSource" username="test" password="1111"
-		driverClassName="com.mysql.jdbc.Driver"
-		factory="org.apache.tomcat.dbcp.dbcp2.BasicdataSourceFactory"
-		url="jdbc:mysql://localhost:3306/kb" maxActive="500" />
+	<Resource
+	 name="jdbc/MysqlDB" 
+	 auto="Container"
+		type="javax.sql.DataSource" 
+		username="test" 
+		password="0506"
+		driverClassName="com.mysql.cj.jdbc.Driver"
+		factory="org.apache.tomcat.dbcp.dbcp2.BasicDataSourceFactory"
+		url="jdbc:mysql://localhost:3306/kb?serverTimezone=UTC" 
+		maxActive="500" />
 </Context>
