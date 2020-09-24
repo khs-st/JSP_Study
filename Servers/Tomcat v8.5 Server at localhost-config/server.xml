@@ -153,7 +153,7 @@
              Note: The pattern used is equivalent to using pattern="common" -->
         <Valve className="org.apache.catalina.valves.AccessLogValve" directory="logs" pattern="%h %l %u %t &quot;%r&quot; %s %b" prefix="localhost_access_log" suffix=".txt"/>
 
-      <Context docBase="JSP0921" path="/JSP0921" reloadable="true" source="org.eclipse.jst.jee.server:JSP0921"/><Context docBase="DispatchRedirect0922" path="/" reloadable="true" source="org.eclipse.jst.jee.server:DispatchRedirect0922"/><Context docBase="JSP0922" path="/JSP0922" reloadable="true" source="org.eclipse.jst.jee.server:JSP0922"/><Context docBase="boardTest" path="/boardTest" reloadable="true" source="org.eclipse.jst.jee.server:boardTest"/></Host>
+      <Context docBase="JSP0921" path="/JSP0921" reloadable="true" source="org.eclipse.jst.jee.server:JSP0921"/><Context docBase="DispatchRedirect0922" path="/" reloadable="true" source="org.eclipse.jst.jee.server:DispatchRedirect0922"/><Context docBase="JSP0922" path="/JSP0922" reloadable="true" source="org.eclipse.jst.jee.server:JSP0922"/><Context docBase="boardTest" path="/boardTest" reloadable="true" source="org.eclipse.jst.jee.server:boardTest"/><Context docBase="BBS_kobalja" path="/BBS_kobalja" reloadable="true" source="org.eclipse.jst.jee.server:BBS_kobalja"/></Host>
     </Engine>
   </Service>
 </Server>
