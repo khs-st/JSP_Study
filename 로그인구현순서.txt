@@ -33,3 +33,5 @@ evt_type tinyint not null,
 dttm datetime not null default now()
 );
 
+3.  getleaveFl 해서 fl을 true로 바꿔주고 로그인할때 leave_fl 이 false인것만 되게 하면 회원탈퇴
+
