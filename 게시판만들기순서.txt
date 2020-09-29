@@ -94,3 +94,10 @@ public class JdbcUtil {
 }
 
 3. BoardService를 작성하고나서 BoardDAO작성
+
+
+
+
+
+
+view ___request_____controller_____Action(알고리즘)__________Service

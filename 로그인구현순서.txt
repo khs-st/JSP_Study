@@ -1,0 +1,35 @@
+로그인 매니저- 해시테입, 리스너, 세션에 대해 알아야하며 회원정보가 들어가는 DB테이블을 만들어야한다. 
+Action에서 로그인 다루면 된다.
+
+로그인 구현 순서
+1. 사용자 테이블(db)부터 생성
+mb_sq: member squence 사용자 순서
+mb_id: member id
+mb_pw: member password
+login_st: login statement
+leave_fl: 회원탈퇴여부
+기존의 boardtest db에서 mb_sq가 필요하기에 mb_sq 컬럼추가함
+
+create table member(
+mb_sq int not null primary key auto_increment,
+mb_id varchar(50),
+mb_pw varchar(200),
+login_st boolean not null default false,
+leave_fl boolean not null default false
+);
+
+
+
+2. 로그인 history는 따로 테이블 생성해서 join으로 다루어야함
+member의 mb_sq를 기본키로 auto_increment
+evt_type은 이벤트 타입
+dttm 시간날짜표시
+hs_sq 로그인 history 순서
+
+create table member_history(
+mb_sq int not null primary key auto_increment,
+hs_sq int,
+evt_type tinyint not null,
+dttm datetime not null default now()
+);
+

@@ -1,0 +1,22 @@
+select
+b.num
+,m.mb_id,
+       b.subject,
+       b.content,
+       b.hit,
+       b.wdate,
+       b.udate,
+       b.ddate
+from boardtest b
+inner join member m on b.mb_sq = m.mb_sq;
+
+
+
+서브쿼리로 member_history 조회
+select * from member_history where mb_sq=(select mb_sq from member where id='khs1');
+
+select
+ mh.evt_type, mh.dttm
+ from member m
+ left join member_history mh on m.mb_sq=mh.mb_sq
+ where id='khs1';
